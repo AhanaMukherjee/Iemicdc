@@ -47,9 +47,9 @@ export const Header = () => {
     const pathName = usePathname()
 
     return (
-        <header className="w-full h-[14vh] sticky flex items-center justify-between pl-[2vw] pr-[2vw] border-b-[2px]">
+        <header className="w-full h-[14vh] sticky z-50 bg-white top-0 left-0 flex items-center justify-between pl-[2vw] pr-[2vw] border-b-[2px]">
             <div className="flex items-center justify-start gap-8 animate-animate-appear">
-                <Image src={'/images/logo.jpeg'} width={100} height={20} alt="" />
+                <Image src={'/images/logo.jpeg'} width={90} height={20} alt="" />
                 <Image src={'/images/iem-logo.png'} width={100} height={20} alt="" />
                 <Image src={'/images/uem-logo.png'} width={100} height={20} alt="" />
             </div>

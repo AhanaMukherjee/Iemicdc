@@ -4,7 +4,7 @@ import { twMerge } from "tailwind-merge"
 type Props = {
     children: React.ReactNode,
     className?: string,
-    otherProps?: any
+    otherProps?: object
 }
 
 export const Container = (props: Props) => {

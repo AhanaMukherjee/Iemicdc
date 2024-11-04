@@ -5,23 +5,25 @@ import Image from 'next/image';
 
 function Carousel({ ...props }) {
     
-    let counter = useRef(0);
+    const counter = useRef(0);
 
     useEffect(() => {
-        const slider: any = document.getElementById('slider')
-        const bar = document.getElementById('bar')
+        const slider: HTMLElement | null = document.getElementById('slider')
+        const bar: HTMLElement | null = document.getElementById('bar')
 
         const interval = setInterval(() => {
             // console.log(counter)
             if (slider) {
                 if (counter.current === 2) {
                     counter.current = 0;
-                    slider?.childNodes?.forEach((node: any) => node.classList.replace('opacity-0', 'opacity-100'))
+                    const nodes = slider.children
+                    Array.from(nodes).forEach((node) => node.classList.replace('opacity-0', 'opacity-100'))
                 } else {
-                    slider?.childNodes[3 - counter.current - 1]?.classList.replace('opacity-100', 'opacity-0');
+                    slider?.children[3 - counter.current - 1]?.classList.replace('opacity-100', 'opacity-0');
                     counter.current+=1;
                 }
-                bar?.childNodes?.forEach((node: any, index) => {
+                const bars = bar?.children || []
+                Array.from(bars).forEach((node, index) => {
                     if (index === counter.current) {
                         node.classList.add('bg-black')
                         node.classList.add('scale-125')

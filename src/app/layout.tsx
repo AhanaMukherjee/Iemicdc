@@ -4,7 +4,6 @@ import { Itim } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import InteractiveGrid from "@/components/animata/background/interactive-grid";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",

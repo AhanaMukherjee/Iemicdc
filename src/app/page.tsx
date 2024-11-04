@@ -1,101 +1,56 @@
+import Carousel from "@/components/Carousel";
+import { Container } from "@/components/Container";
+import { Bot, Cpu, ImageIcon, ShieldHalf } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <Container className=" flex flex-col items-center justify-start gap-10">
+      <Carousel />
+      <div className="w-[60%] space-y-6">
+        <h1 className="w-full text-center text-4xl text-purple-600 font-bold">
+          Welcome To IEM-ICDC 2025!
+        </h1>
+        <p className="text-gray-500">
+          IEM-ICDC 2025: International Conference on Computational Intelligence,
+          Data Science and Cloud Computing is an endeavour in enticing interest
+          for Computational Intelligence and Data Science applications in
+          diverse domains. As the world is moving towards industry 4.0,
+          Computational Intelligence, Data Science and Cloud Computing are
+          becoming more and more relevant in our society in all possible ways.
+          <br />
+          The most substantial new findings about AI and Robotics, Image
+          processing and NLP, Cloud Computing and big data analytics as well as
+          in Cyber security, Blockchain and IoT and various allied fields will
+          be presented in the three-day event comprised of insightful invited
+          talks, innovative technical sessions and informative workshops. The
+          general chair, the convener, along with the entire team invite
+          researchers and industry personnel around the world to take part in
+          the upcoming event to make the event a grand success.
+        </p>
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <div className="w-[60%] flex flex-col items-center justify-center gap-3">
+        <h1 className="w-full text-4xl text-center text-purple-600 font-bold after:w-fit after:absolute relative after:bottom-0 after:left-0 after:h-[2px] after:bg-purple-600">Our Technical Partners</h1>
+        {/* <div className="w-full h-[2px] bg-purple-300 "></div> */}
+        <div className=" w-full flex items-center justify-between px-10">
+          <Image src="/images/SP1.jpg" width={200} height={200} alt="SP1" />
+          <Image src="/images/SP2.jpg" width={400} height={200} alt="SP2" />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+
+      <div className="w-[60%] space-y-6">
+        <h1 className="w-full text-center text-4xl text-purple-600 font-bold">
+          Tracks Of The Conference
+        </h1>
+        <ul className="text-gray-500 text-2xl space-y-5">
+          <li className=" flex items-center gap-2"><Bot /> AI and Robotics</li>
+          <li className=" flex items-center gap-2"><ImageIcon /> Image processing and NLP</li>
+          <li className=" flex items-center gap-2"><Cpu /> Cloud Computing and big data analytics</li>
+          <li className=" flex items-center gap-2"><ShieldHalf /> Cyber security, Blockchain and IoT</li>
+        </ul>
+      </div>
+
+    </Container>
   );
 }

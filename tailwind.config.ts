@@ -12,8 +12,24 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      keyframes: {
+        appear: {
+          from: {
+            opacity: "0",
+            transform: "translateY(10px)",
+          },
+          to: {
+            opacity: "1",
+            transform: "translateY(0px)",
+          },
+        },
+      },
+      animation: {
+        "animate-appear": "appear 0.5s ease-in-out",
+        "animate-disappear": "appear 0.5s ease-in-out reverse",
+      },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 };
 export default config;

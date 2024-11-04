@@ -45,8 +45,8 @@ function Carousel({ ...props }) {
             <div {...props} className='w-[100vw] h-[86vh] animate-animate-appear cursor-pointer relative overflow-hidden m-auto'>
                 <div className='w-full h-full absolute top-0 left-0 transition duration-500 scroll-smooth opacity-100' id='slider'>
                     <Image src="/images/img1.jpg" fill={true} alt='' className='absolute left-0 top-0 w-full md:h-full h-[90%] transition-opacity duration-500 opacity-100  md:object-cover object-cover' />
-                    <Image src="/images/img2.jpg" fill={true} alt='' className='absolute transition-opacity duration-500 opacity-100 left-0 top-0 w-full md:h-full md:object-cover h-[90%]' />
-                    <Image src="/images/img3.jpeg" fill={true} alt='' className='absolute transition-opacity duration-500 opacity-100 left-0 top-0 w-full md:h-full h-[90%] md:object-cover' onLoad={(e) => e.currentTarget.parentElement?.classList.replace('opacity-0', 'opacity-100')} />
+                    <Image src="/images/img3.jpeg" fill={true} alt='' className='absolute transition-opacity duration-500 opacity-100 left-0 top-0 w-full md:h-full md:object-cover h-[90%]' />
+                    <Image src="/images/img2.jpg" fill={true} alt='' className='absolute transition-opacity duration-500 opacity-100 left-0 top-0 w-full md:h-full h-[90%] md:object-cover' onLoad={(e) => e.currentTarget.parentElement?.classList.replace('opacity-0', 'opacity-100')} />
 
                     <div id='bar' className='absolute flex items-center shadow-xl border-[1px] border-white justify-center gap-2 rounded-md bg-white opacity-60 px-2 md:bottom-10 bottom-56 left-[50%] translate-x-[-50%] p-1'>
                         <div className='rounded-full size-2 border-[1px] border-black bg-black scale-125'></div>

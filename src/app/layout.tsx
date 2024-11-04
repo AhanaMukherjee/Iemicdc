@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Itim } from "next/font/google";
+import { Lato } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   description: "Organized by IEM UEM",
 };
 
-const itim = Itim({ subsets: ["latin"], weight: "400" });
+const itim = Lato({ subsets: ["latin"], weight: "400" });
 
 export default function RootLayout({
   children,

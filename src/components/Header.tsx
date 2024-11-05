@@ -57,7 +57,7 @@ export const Header = () => {
     return (
         <header className="w-full md:h-[14vh] h-[10vh] sticky z-50 bg-white top-0 left-0 flex items-center justify-between md:pl-[2vw] md:pr-[2vw] border-b-[2px]">
             <div className="flex items-center justify-start gap-8 animate-animate-appear">
-                <Image src={'/images/logo.jpeg'} width={90} height={20} alt="" className=" cursor-pointer md:h-auto h-[10vh] object-fit" onClick={() => router.push("/")} />
+                {/* <Image src={'/images/logo.png'} width={90} height={20} alt="" className=" cursor-pointer md:h-auto h-[10vh] object-fit" onClick={() => router.push("/")} /> */}
                 <Image src={'/images/iem-logo.png'} width={100} height={20} alt="" className=" cursor-pointer hidden md:block" onClick={() => window.open("https://iem.edu.in/", "__blank")}/>
                 <Image src={'/images/uem-logo.png'} width={100} height={20} alt="" className=" cursor-pointer hidden md:block" onClick={() => window.open("https://uem.edu.in/uem-kolkata/", "__blank")} />
                 {/* <h1 className="w-full text-4xl">IEMICDC 2025</h1> */}

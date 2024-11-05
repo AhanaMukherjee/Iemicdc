@@ -3,7 +3,7 @@ import Carousel from "@/components/Carousel";
 import { Container } from "@/components/Container";
 import { DataBox } from "@/components/DataBox";
 import { Separator } from "@/components/Separator";
-import { Bot, Cpu, ImageIcon, ShieldHalf } from "lucide-react";
+import { Bot, CalendarCheck, CalendarDays, Cpu, ImageIcon, ShieldHalf } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
@@ -98,84 +98,61 @@ export default function Home() {
         <h1 className="text-4xl font-bold text-primary mb-10">Important Dates</h1>
 
         <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-          <table className="w-full text-sm text-left rtl:text-right text-primary dark:text-gray-400">
-            <thead className="text-xs text-primary uppercase bg-gray-50 dark:bg-gray-100 dark:text-primary-400">
+          <table className="w-full text-sm text-left rtl:text-right text-primary">
+            <thead className="text-primary uppercase bg-gray-50">
               <tr>
-                <th scope="col" className="px-6 py-3">
-                  Event
+                <th scope="col" className="px-6 py-3 flex items-center justify-start gap-2 text-lg font-extrabold">
+                  <CalendarCheck className="" />
+                  <p className="">Event</p>
                 </th>
-                <th scope="col" className="px-6 py-3">
-                  Date
+                <th scope="col" className="px-6 py-3 text-lg font-bold">
+                  <div className="flex items-center justify-start gap-2">
+                  <CalendarDays />
+                  <p>Date</p>
+                  </div>
                 </th>
               </tr>
             </thead>
             <tbody>
-              <tr className="odd:bg-white odd:dark:bg-gray-200 even:bg-gray-50 even:dark:bg-gray-200 border-b dark:border-gray-700">
+              <tr className="odd:bg-white even:bg-gray-50 border-b">
                 <th
                   scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                  className="px-6 py-4 font-medium text-lg text-gray-700 whitespace-nowrap"
                 >
                   Deadline for full paper Submission
                 </th>
-                <td className="px-6 py-4">January 10, 2025</td>
+                <td className="px-6 py-4 text-lg">January 10, 2025</td>
               </tr>
-              <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+              <tr className="odd:bg-white even:bg-gray-50 border-b">
                 <th
                   scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                  className="px-6 py-4 font-medium text-lg text-gray-700 whitespace-nowrap"
                 >
                   Acceptance notification for papers
                 </th>
-                <td className="px-6 py-4">March 04, 2025</td>
+                <td className="px-6 py-4 text-lg">March 04, 2025</td>
               </tr>
-              <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+              <tr className="odd:bg-white even:bg-gray-50 border-b">
                 <th
                   scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                  className="px-6 py-4 font-medium text-lg text-gray-700 whitespace-nowrap"
                 >
                   Deadline for camera ready paper submission:
                 </th>
-                <td className="px-6 py-4">March 14, 2025</td>
+                <td className="px-6 py-4 text-lg">March 14, 2025</td>
               </tr>
-              <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+              <tr className="odd:bg-white even:bg-gray-50 border-b">
                 <th
                   scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                  className="px-6 py-4 font-medium text-lg text-gray-700 whitespace-nowrap"
                 >
                   Deadline for paper and participation registration
                 </th>
-                <td className="px-6 py-4">March 20, 2025</td>
+                <td className="px-6 py-4 text-lg">March 20, 2025</td>
               </tr>
-
             </tbody>
           </table>
         </div>
-        {/* <table className="table-auto w-[80%]">
-          <thead>
-            <tr>
-              <th>Event</th>
-              <th>Date</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Deadline for full paper Submission</td>
-              <td>January 10, 2025</td>
-            </tr>
-            <tr>
-              <td>Acceptance notification for papers</td>
-              <td>March 04, 2025</td>
-            </tr>
-            <tr>
-              <td>Deadline for camera ready paper submission</td>
-              <td>March 14, 2025</td>
-            </tr>
-            <tr>
-              <td>Deadline for paper and participation registration</td>
-              <td>March 20, 2025</td>
-            </tr>
-          </tbody>
-        </table> */}
       </div>
     </Container>
   );

@@ -20,13 +20,13 @@ export default function About() {
           engineering course with 100% job assistance. Contact today to know the
           course details of computer science engineering, mechanical
           engineering, electrical and electronics engineering, electronics and
-          communication engineering."
+          communication engineering.<a style={{'color':'blue'}} href='https://iem.edu.in/' target='__blank'>For more information, visit here!</a>"
         />
-        <Image src="/images/iem-logo.png" width={400} height={400} alt="SP2" />
+        <Image src="/images/iem.jpeg" width={400} height={400} alt="SP2" />
       </div>
 
       <div className=" w-[80%] flex items-center justify-between">
-        <Image src="/images/AP1.jpg" width={400} height={400} alt="SP1" />
+        <Image src="/images/iem-logo.png" width={400} height={400} alt="SP1" />
         <DataBox
           title="About The Conference"
           data="IEM-ICDC 2025: 3rd International Conference on Computational

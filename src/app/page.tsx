@@ -2,6 +2,7 @@ import GithubCardShiny from "@/components/animata/card/github-card-shiny";
 import Carousel from "@/components/Carousel";
 import { Container } from "@/components/Container";
 import { DataBox } from "@/components/DataBox";
+import { Separator } from "@/components/Separator";
 import { Bot, Cpu, ImageIcon, ShieldHalf } from "lucide-react";
 import Image from "next/image";
 import React from "react";
@@ -14,10 +15,10 @@ const Card = ({
   Avatar: React.ReactNode;
 }) => {
   return (
-    <GithubCardShiny className="w-[25%] h-[25vh] cursor-pointer px-0 py-2 bg-[#ededed] text-purple-600 shadow-md">
-      <div className="w-full h-full flex flex-col items-center justify-center gap-0 p-2">
+    <GithubCardShiny className="w-[35%] h-[35vh] cursor-pointer px-0 py-2 bg-gray-100 text-primary shadow-sm">
+      <div className="w-full h-full flex flex-col items-center justify-center gap-2 p-2">
         {Avatar}
-        <h1 className="text-xl text-center h-[10vh]">{track}</h1>
+        <h1 className="text-lg text-center h-[10vh] font-bold">{track}</h1>
       </div>
     </GithubCardShiny>
   );
@@ -48,48 +49,133 @@ export default function Home() {
           the upcoming event to make the event a grand success."
       />
 
-      <div className="w-[60%] flex flex-col items-center justify-center gap-3">
-        <h1 className="w-full text-4xl text-center text-purple-600 font-bold after:w-fit after:absolute relative after:bottom-0 after:left-0 after:h-[2px] after:bg-purple-600">
+      <Separator />
+
+      <div className="w-[100%] flex flex-col items-center justify-center gap-3">
+        <h1 className="w-full text-4xl text-center text-primary font-bold after:w-fit after:absolute relative after:bottom-0 after:left-0 after:h-[2px] after:bg-primary">
           Our Technical Partners
         </h1>
-        {/* <div className="w-full h-[2px] bg-purple-300 "></div> */}
-        <div className=" w-full flex items-center justify-between px-10">
+        <div className=" w-full flex items-center justify-center gap-20 my-4">
           <Image src="/images/SP1.jpg" width={200} height={200} alt="SP1" />
-          <Image src="/images/SP2.jpg" width={400} height={200} alt="SP2" />
+          <Image src="/images/SP2.jpg" width={300} height={200} alt="SP2" />
+          <Image src="/images/SP3.jpeg" width={200} height={200} alt="SP2" />
+          <Image src="/images/SP4.jpeg" width={200} height={200} alt="SP2" />
         </div>
       </div>
 
-      <div className="w-[60%] space-y-6">
-        <h1 className="w-full text-center text-4xl text-purple-600 font-bold">
+      <Separator />
+
+      <div className="w-[80%] space-y-6 my-10">
+        <h1 className="w-full text-center text-4xl text-primary font-bold mb-10">
           Tracks Of The Conference
         </h1>
-        {/* <ul className="text-gray-500 text-2xl space-y-5">
-          <li className=" flex items-center gap-2"><Bot /> AI and Robotics</li>
-          <li className=" flex items-center gap-2"><ImageIcon /> Image processing and NLP</li>
-          <li className=" flex items-center gap-2"><Cpu /> Cloud Computing and big data analytics</li>
-          <li className=" flex items-center gap-2"><ShieldHalf /> Cyber security, Blockchain and IoT</li>
-        </ul> */}
         <div className="w-full flex items-center justify-center gap-4">
           <Card
             track="AI And Robotics"
-            Avatar={<Bot className="size-[80%]" />}
+            Avatar={<Bot className="size-[60%]" />}
           />
 
           <Card
             track="Image Processing And NLP"
-            Avatar={<ImageIcon className="size-[80%]" />}
+            Avatar={<ImageIcon className="size-[60%]" />}
           />
 
           <Card
-            track="Cloud Computing and big data analytics"
-            Avatar={<Cpu className="size-[80%]" />}
+            track="Cloud Computing And Big Data Analytics"
+            Avatar={<Cpu className="size-[60%]" />}
           />
 
           <Card
-            track="Cyber security, Blockchain and IoT"
-            Avatar={<ShieldHalf className="size-[80%]" />}
+            track="Cyber Security, Blockchain And IoT"
+            Avatar={<ShieldHalf className="size-[60%]" />}
           />
         </div>
+      </div>
+
+      <Separator />
+
+      <div className=" space-y-3 text-center w-[80%]">
+        <h1 className="text-4xl font-bold text-primary mb-10">Important Dates</h1>
+
+        <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+          <table className="w-full text-sm text-left rtl:text-right text-primary dark:text-gray-400">
+            <thead className="text-xs text-primary uppercase bg-gray-50 dark:bg-gray-100 dark:text-primary-400">
+              <tr>
+                <th scope="col" className="px-6 py-3">
+                  Event
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Date
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="odd:bg-white odd:dark:bg-gray-200 even:bg-gray-50 even:dark:bg-gray-200 border-b dark:border-gray-700">
+                <th
+                  scope="row"
+                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                >
+                  Deadline for full paper Submission
+                </th>
+                <td className="px-6 py-4">January 10, 2025</td>
+              </tr>
+              <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                <th
+                  scope="row"
+                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                >
+                  Acceptance notification for papers
+                </th>
+                <td className="px-6 py-4">March 04, 2025</td>
+              </tr>
+              <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                <th
+                  scope="row"
+                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                >
+                  Deadline for camera ready paper submission:
+                </th>
+                <td className="px-6 py-4">March 14, 2025</td>
+              </tr>
+              <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                <th
+                  scope="row"
+                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                >
+                  Deadline for paper and participation registration
+                </th>
+                <td className="px-6 py-4">March 20, 2025</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+        {/* <table className="table-auto w-[80%]">
+          <thead>
+            <tr>
+              <th>Event</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Deadline for full paper Submission</td>
+              <td>January 10, 2025</td>
+            </tr>
+            <tr>
+              <td>Acceptance notification for papers</td>
+              <td>March 04, 2025</td>
+            </tr>
+            <tr>
+              <td>Deadline for camera ready paper submission</td>
+              <td>March 14, 2025</td>
+            </tr>
+            <tr>
+              <td>Deadline for paper and participation registration</td>
+              <td>March 20, 2025</td>
+            </tr>
+          </tbody>
+        </table> */}
       </div>
     </Container>
   );

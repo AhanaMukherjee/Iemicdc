@@ -48,11 +48,11 @@ export default function GithubCardSkew({ className, children }: { className?: st
 
     const { width, height } = containerRef.current.getBoundingClientRect();
     const { rotationX, rotationY } = calculateCardRotation({
-      centerX: width / 2.5,
-      centerY: height / 2.5,
+      centerX: width / 2,
+      centerY: height / 2,
       currentX: x,
       currentY: y,
-      maxRotationX: 6,
+      maxRotationX: 4,
       maxRotationY: 6,
     });
     containerRef.current.style.setProperty("--x", `${rotationX}deg`);
@@ -65,7 +65,7 @@ export default function GithubCardSkew({ className, children }: { className?: st
     <div
       ref={containerRef}
       className={cn(
-        "flex max-w-80 transform-gpu hover:border-purple-600 flex-col gap-4 rounded-3xl border border-border bg-zinc-700 p-10 text-zinc-200 shadow-lg transition-transform ease-linear will-change-transform",
+        "flex max-w-80 transform-gpu hover:border-primary flex-col gap-4 rounded-3xl border border-border bg-zinc-700 p-10 text-zinc-200 shadow-lg transition-transform ease-linear will-change-transform",
         className,
       )}
       style={{

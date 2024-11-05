@@ -19,17 +19,17 @@ const pages = [
         path: "/speaker"
     },
     {
-        name: "Program Committee",
+        name: "Committee",
         path: "/committee"
     },
     {
         name: "Call For Papers",
         path: "/papers"
     },
-    {
-        name: "Important Dates",
-        path: "/dates"
-    },
+    // {
+    //     name: "Important Dates",
+    //     path: "/dates"
+    // },
     {
         name: "Submission",
         path: "/submissions"
@@ -68,7 +68,7 @@ export const Header = () => {
                 {pages.map(page => (<div
                 key={page.name}
                 onClick={() => router.push(page.path)}
-                className={`hover:text-purple-600 transition-colors cursor-pointer duration-300 relative after:absolute after:bottom-[-5px] after:left-0 ${pathName === page.path ? 'after:w-full text-purple-600' : 'after:w-0'} after:h-[3px] after:bg-purple-600 hover:after:w-full after:transition-all after:duration-300 after:rounded-full`}>
+                className={`hover:text-primary transition-colors cursor-pointer duration-300 relative after:absolute after:bottom-[-5px] after:left-0 ${pathName === page.path ? 'after:w-full text-primary' : 'after:w-0'} after:h-[3px] after:bg-primary hover:after:w-full after:transition-all after:duration-300 after:rounded-full`}>
                     {page.name}
                 </div>))}
             </nav>

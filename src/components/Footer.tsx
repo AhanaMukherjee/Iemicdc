@@ -3,11 +3,11 @@ import Image from "next/image";
 
 export const Footer = () => {
   return (
-    <div className="w-full h-[40vh] bg-purple-300 mt-10 flex flex-col items-center justify-between">
+    <div className="w-full h-[40vh] bg-blue-200 mt-10 flex flex-col items-center justify-between">
       <div className="w-full h-[90%] flex items-center justify-between px-32">
         <div className=" h-full flex flex-col items-center justify-center gap-0">
           <Image src="/images/logo-nobg.png" width={200} height={180} alt="" />
-          <p className="text-sm text-purple-900 text-center">
+          <p className="text-sm text-blue-900 text-center">
             3rd International Conference on 
             <br />
             Computational Intelligence, Data{" "}
@@ -16,7 +16,7 @@ export const Footer = () => {
             April 11-12, 2025
           </p>
         </div>
-        <div className=" flex flex-col items-center justify-center gap-4 text-purple-900">
+        <div className=" flex flex-col items-center justify-center gap-4 text-blue-900">
           <div className="flex items-center justify-start gap-2">
             <LocateFixed />
             <p>
@@ -34,7 +34,7 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="bg-purple-300 w-full text-center text-purple-900 pb-1">Copyright @2025 IEM-ICDC . All Rights Reserved. </div>
+      <div className="bg-blue-200 w-full text-center text-blue-900 pb-1">Copyright @2025 IEM-ICDC . All Rights Reserved. </div>
     </div>
   );
 };
